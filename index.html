@@ -1,17 +1,137 @@
 <!DOCTYPE html>
-<title>
- <h1> Website</h1>
- <style link="./style.css"></style>
-</title>
-<body>
-   <h1> Hi Humans</h1>
-<ul>
-    <li> Home</li>
-    <li> Projects</li>
-    <li>Contact</li>
-    
-</ul>
-<br>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS Script Compiler Link -->
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-transparent text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-<script link="script.js"></script>
+    <!-- 1. STICKY BLACK NAVIGATION BAR -->
+    <nav class="sticky top-0 bg-black border-b border-neutral-900 z-50">
+        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-white text-lg tracking-tight hover:opacity-80 transition">Adithya.dev</a>
+            <div class="flex items-center gap-6 font-medium text-sm text-neutral-300">
+                <a href="#" class="hover:text-white transition">Home</a>
+                <a href="#hardware" class="hover:text-white transition">Hardware</a>
+                <a href="#software" class="hover:text-white transition">Software</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO / ABOUT SECTION -->
+    <section id="about" class="max-w-3xl mx-auto px-6 py-20 md:py-28 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+        <div class="flex-1 text-center md:text-left">
+            <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider block mb-2">Available for Projects</span>
+            <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Building clean web interfaces.</h1>
+            <p class="text-base text-slate-600 leading-relaxed mb-6">
+                Hi, I'm Adithya. I like to build and break and rebuild stuff.
+            </p>
+            <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-sm transition">
+                Get in touch
+            </a>
+        </div>
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 p-1 shadow-md flex-shrink-0">
+            <div class="w-full h-full bg-white rounded-full flex items-center justify-center font-bold text-slate-400 text-sm">
+                [ Photo ]
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. HARDWARE ENGINEERING SECTION -->
+    <section id="hardware" class="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200/50">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">01. Hardware Engineering</h2>
+            <p class="text-sm text-slate-500 mt-1">Physical micro-architectures, embedded circuitry, and robotics instrumentation.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Hardware Card 1 -->
+            <div class="group flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-500/20 transition-all duration-300">
+                <div>
+                    <span class="inline-block text-[10px] font-bold tracking-wider text-cyan-600 bg-cyan-50 px-2.5 py-1 rounded-full uppercase mb-4">PCB Design</span>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition duration-200 mb-2">Custom Microcontroller Board</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">Designed and multi-layered an operational development module built around an ARM core architecture.</p>
+                </div>
+                <!-- Bottom Action Row -->
+                <div class="flex items-center justify-between mt-4">
+                    <a href="https://github.com" target="_blank" class="text-xs font-bold text-slate-900 inline-flex items-center gap-1 hover:text-indigo-600 group-hover:translate-x-1 transition-all duration-200">
+                        View Blueprint <span class="text-indigo-600">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hardware Card 2 -->
+            <div class="group flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-indigo-500/20 transition-all duration-300">
+                <div>
+                    <span class="inline-block text-[10px] font-bold tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full uppercase mb-4">IoT Sensor Array</span>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition duration-200 mb-2">Automated Environmental Hub</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">Assembled telemetry hubs reading spatial variables using high-precision logic systems and I2C lines.</p>
+                </div>
+                <!-- Bottom Action Row -->
+                <div class="flex items-center justify-between mt-4">
+                    <a href="https://github.com" target="_blank" class="text-xs font-bold text-slate-900 inline-flex items-center gap-1 hover:text-indigo-600 group-hover:translate-x-1 transition-all duration-200">
+                        View Project <span class="text-indigo-600">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SOFTWARE DEVELOPMENT SECTION -->
+    <section id="software" class="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200/50">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-900 tracking-tight">02. Software Systems</h2>
+            <p class="text-sm text-slate-500 mt-1">Full-stack web applications, compiled systems architecture, and pipeline components.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Software Card 1 -->
+            <div class="group flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-emerald-500/20 transition-all duration-300">
+                <div>
+                    <span class="inline-block text-[10px] font-bold tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase mb-4">Web Optimization</span>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition duration-200 mb-2">Analytics Dashboard</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">A clean data analysis layer structured using modern framework loops and responsive grid distributions.</p>
+                </div>
+                <!-- Bottom Action Row -->
+                <div class="flex items-center justify-between mt-4">
+                    <a href="https://github.com" target="_blank" class="text-xs font-bold text-slate-900 inline-flex items-center gap-1 hover:text-emerald-600 group-hover:translate-x-1 transition-all duration-200">
+                        View Source <span class="text-emerald-600">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Software Card 2 -->
+            <div class="group flex flex-col justify-between p-6 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-purple-500/20 transition-all duration-300">
+                <div>
+                    <span class="inline-block text-[10px] font-bold tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full uppercase mb-4">Compiler Tech</span>
+                    <h3 class="text-lg font-bold text-slate-900 group-hover:text-purple-600 transition duration-200 mb-2">Wasm Matrix Core</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">An isolated assembly component engineered using C++ toolchains for performance math directly in browser runtimes.</p>
+                </div>
+                <!-- Bottom Action Row -->
+                <div class="flex items-center justify-between mt-4">
+                    <a href="https://github.com" target="_blank" class="text-xs font-bold text-slate-900 inline-flex items-center gap-1 hover:text-purple-600 group-hover:translate-x-1 transition-all duration-200">
+                        View Source <span class="text-purple-600">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT & FOOTER SECTION -->
+    <section id="contact" class="max-w-3xl mx-auto px-6 pt-12 pb-16 border-t border-slate-200/50 text-center">
+        <h2 class="text-xl font-bold text-slate-900 mb-2">Let's create something together</h2>
+        <p class="text-sm text-slate-600 mb-6">Drop me a message for collaborations or project consultations.</p>
+        <a href="mailto:adithyakrishnavijay@gmail.com" class="inline-block font-bold text-indigo-600 text-lg hover:text-indigo-700 underline decoration-2 underline-offset-4 transition">
+            adithyakrishnavijay@gmail.com
+        </a>
+        <p class="text-xs text-slate-400 mt-16">&copy; Clean layout built efficiently with Tailwind CSS.</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+</html>
